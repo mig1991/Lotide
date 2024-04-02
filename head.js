@@ -18,4 +18,4 @@ const head = function(array) {
 
 assertEqual(head([5,2,3,4,5,6]), 5);
 assertEqual(head([]), undefined);
-assertEqual(head([1,2,3]), 2);
+assertEqual(head([1,2,3]), 2); // this one should be wrong
