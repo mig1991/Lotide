@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// this will define the head function, and will say undefi
+// this will define the head function, and will say undefined if array is empty
 const head = function(array) {
   if (array.length === 0) {
     return undefined; // displays message if array is empty
