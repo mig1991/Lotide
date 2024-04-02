@@ -6,27 +6,27 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Define the tail function
+// created tail function, which returns everything except the first item
 const tail = function(array) {
   return array.slice(1);
 };
 
-// Test cases for the tail function
-const words = ["Yo Yo", "Lighthouse", "Labs"];
+// test cases
+const words = ["Hello", "Lighthouse", "Labs"];
 const tailWords = tail(words); // Capture the return value of the tail function
 
-// Test case 1: Original array should still have 3 elements
+// check to see that arrays are same length
 assertEqual(words.length, 3);
 
-// Test case 2: First element of the returned array should be the second element of the original array
+// first of tail should be 2nd of words
 assertEqual(tailWords[0], words[1]);
 
-// Test case 3: Behavior of tail function with an array with one element
-const singleElementArray = [1];
-const tailSingleElementArray = tail(singleElementArray);
-assertEqual(tailSingleElementArray.length, 0); // Tail of a single-element array should be an empty array
+// one element test
+const oneElement = [1];
+const tailOneElement = tail(oneElement);
+assertEqual(tailOneElement.length, 0); 
 
-// Test case 4: Behavior of tail function with an empty array
+// empty array
 const emptyArray = [];
 const tailEmptyArray = tail(emptyArray);
-assertEqual(tailEmptyArray.length, 0); // Tail of an empty array should be an empty array
+assertEqual(tailEmptyArray.length, 0); 
