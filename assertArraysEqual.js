@@ -14,10 +14,12 @@ const eqArrays = function (array1, array2) {
 
 const assertArraysEqual = function (array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log("pass, both arrays are equal");
+    console.log(`✅✅✅ pass, ${array1} and ${array2} are equal`);
   } else {
-    console.log("fail, arrays are not equal");
+    console.log(`🔴🔴🔴 fail, ${array1} and ${array2}l do not match`);
   }
 };
 
 assertArraysEqual([1,2,3], [1,2,3]);
+assertArraysEqual([1,2,3,4], [1,2,3,4,5]);
+assertArraysEqual([1,2,"3"], [1,2,3]);
