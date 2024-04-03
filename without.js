@@ -33,5 +33,9 @@ const without = function(original, removeThese) {
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => pass
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => pass
-assertArraysEqual(without([1, 2, 3, 4, 5], [1, 2, 3, 4]), [5, 6]); //fail
+assertArraysEqual(without([1, 2, 3, 4, 5], [1, 2, 3, 4]), [5, 6]); // this should fail
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+assertArraysEqual(words, ["hello", "world", "lighthouse"]); // => should PASS
 
