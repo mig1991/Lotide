@@ -31,9 +31,7 @@ const without = function(original, removeThese) {
   return arrayStorage;
 };
 
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"]));
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => pass
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => pass
+assertArraysEqual(without([1, 2, 3, 4, 5], [1, 2, 3, 4]), [5, 6]); //fail
 
