@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqObjects = function(obj1, obj2) {
-  const keys1 = Object.keys(obj1);
-  const keys2 = Object.keys(obj2);
+  const keys1 = Object.keys(obj1); //grab keys from object 1
+  const keys2 = Object.keys(obj2); //grab keys from object 2
 
   if (keys1.length !== keys2.length) {
     return false;
