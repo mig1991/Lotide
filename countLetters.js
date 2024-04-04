@@ -11,10 +11,10 @@ const countLetters = function (words) {
 
   for (let letter of words) { //iterate through each letter in the word
     if (letter !== ' ' && letter !== ',') {
-      if (letterCount[letter]) { //check if the current letter already has a count
-        letterCount[letter]++;
+      if (letterCount[letter]) { //check if the current letter already has a count (checking for a value, true if there is a value already)
+        letterCount[letter]++; //if there is a value, increase count by 1
       } else {
-        letterCount[letter] = 1;
+        letterCount[letter] = 1; //if no value, initialize a value for the letter (key)
       }
     }
   }
