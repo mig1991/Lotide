@@ -10,7 +10,7 @@ const assertEqual = function (actual, expected) {
 const countOnly = function (allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    if (itemsToCount[item]) { // Check if item should be counted based on itemsToCount object
+    if (itemsToCount[item]) { 
       if (results[item]) {
         results[item] += 1;
       } else {
@@ -18,7 +18,7 @@ const countOnly = function (allItems, itemsToCount) {
       }
     }
   }
-  return results; // Don't forget to return the results object
+  return results; 
 }
 
 const firstNames = [
