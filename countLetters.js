@@ -21,4 +21,5 @@ const countLetters = function (words) {
   return letterCount;
 }
 
-console.log(countLetters("Hello, my name is Miguel and I am cool"));
+console.log(countLetters("Hello"));
+
