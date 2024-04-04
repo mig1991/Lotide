@@ -1,4 +1,3 @@
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -6,7 +5,6 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴🔴🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
 
 const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
@@ -19,8 +17,6 @@ const eqArrays = function (array1, array2) {
   }
   return true;
 };
-
-
 
 const eqObjects = function(obj1, obj2) {
   const keys1 = Object.keys(obj1); //grab keys from object 1
@@ -40,15 +36,12 @@ const eqObjects = function(obj1, obj2) {
 };
 
 
-
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-eqObjects(multiColorShirtObject, anotherMultiColorShirtObject); // => true
-
-const longSleeveMultiColorShirtObject = {
-  size: "medium",
-  colors: ["red", "blue"],
-  sleeveLength: "long",
+const assertObjectsEqual = function(obj1, obj2) {
+  const inspect = require('util').inspect;
+  
+  if (eqObjects(obj1, obj2)) {
+    console.log(`🟢🟢🟢🟢🟢 Assertion Passed: ${inspect(obj1)} === ${inspect(obj2)}`);
+  } else {
+    console.log(`🔴🔴🔴🔴🔴 Assertion Failed: ${inspect(obj1)} !== ${inspect(obj2)}`);
+  }
 };
-eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
