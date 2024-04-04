@@ -22,7 +22,11 @@ const eqObjects = function(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
   
-  return keys1.length === keys2.length && keys1.every(key => {
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  
+  return keys1.every(key => {
     const val1 = obj1[key];
     const val2 = obj2[key];
     
