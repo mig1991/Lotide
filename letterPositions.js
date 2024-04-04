@@ -44,7 +44,7 @@ const letterPositions = function (sentence) {
       if (results[letter] === undefined) { //if this is the first time seeing that letter, make an empty array
         results[letter] = [];
       }
-      results[letter].push(i); //push the current index into the array
+      results[letter].push(i); //push the current index # into the array
     
     }
     i++; //increment the index
