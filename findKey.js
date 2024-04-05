@@ -9,6 +9,15 @@ const findKey = function (object, callback) {
 };
 
 
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`🟢🟢🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🔴🔴🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+
 
 const result = findKey(
   {
@@ -22,3 +31,5 @@ const result = findKey(
   (x) => x.stars === 2
 ); // => "noma"
 console.log(result);
+
+assertEqual(result, "noma");
