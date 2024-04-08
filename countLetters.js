@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (words) {
+const countLetters = function(words) {
   const letterCount = {};
 
   for (let letter of words) { //iterate through each letter in the word
