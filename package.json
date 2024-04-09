@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@miguelaugusto/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "Similar to Lodash, Lotide is a compact JavaScript library providing fundamental functions for array, object, and string operations, along with assertion methods for testing. Written during bootcamp at Lighthouse Labs",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mig1991/Lotide.git"
   },
-  "author": "",
+  "author": "Miguel Augusto",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mig1991/Lotide/issues"
