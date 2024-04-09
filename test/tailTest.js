@@ -1,16 +1,25 @@
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
+
+describe('#tail', () => {
+  it('returns "Lighthouse", "Labs" for ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+  it('[1] returns 0', () => {
+    assert.deepEqual(tail([1]).length, 0);
+  });
+  it('[] returns 0', () => {
+    assert.deepEqual(tail([]).length, 0);
+  });
+});
 
 
 
 
 
-
+/*
 const words = ["Hello", "Lighthouse", "Labs"];
 const tailWords = tail(words); // Capture the return value of the tail function
-
-// check to see that arrays are same length
-assertEqual(words.length, 3);
 
 // first of tail should be 2nd of words
 assertEqual(tailWords[0], words[1]);
@@ -24,3 +33,5 @@ assertEqual(tailOneElement.length, 0);
 const emptyArray = [];
 const tailEmptyArray = tail(emptyArray);
 assertEqual(tailEmptyArray.length, 0);
+*/
+
